@@ -14,6 +14,11 @@ public class UserServiceImp implements UserService {
     @Autowired
     private UserDao userDao;
 
+    @Override
+    public User setUser(User user, String firstName, String lastName, String email, int series, String model) {
+        return userDao.setUser(user, firstName, lastName, email, series, model);
+    }
+
     @Transactional
     @Override
     public void add(User user) {
@@ -28,7 +33,7 @@ public class UserServiceImp implements UserService {
 
     @Transactional(readOnly = true)
     @Override
-    public List<User> returnUser(int series, String model) {
+    public User returnUser(int series, String model) {
         return userDao.returnUser(series, model);
     }
 

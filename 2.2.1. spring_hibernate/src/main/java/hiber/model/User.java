@@ -26,10 +26,7 @@ public class User {
     public User() {
     }
 
-    public User(String firstName, String lastName, String email, Car carId) {
-        this.firstName = firstName;
-        this.lastName = lastName;
-        this.email = email;
+    public User(Car carId) {
         this.carId = carId;
     }
 
@@ -80,7 +77,7 @@ public class User {
                 ", firstName='" + firstName + '\'' +
                 ", lastName='" + lastName + '\'' +
                 ", email='" + email + '\'' +
-                ", " + carId +
+                ", " + carId.toString() +
                 '}';
     }
 }

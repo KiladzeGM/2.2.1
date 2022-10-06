@@ -19,11 +19,6 @@ public class Car {
     public Car() {
     }
 
-    public Car(int series, String model) {
-        this.series = series;
-        this.model = model;
-    }
-
     public int getSeries() {
         return series;
     }
@@ -42,7 +37,7 @@ public class Car {
 
     @Override
     public String toString() {
-        return "series='" + series + '\'' +
-                ", model='" + model + '\'';
+        return "series=" + series +
+                ", model='" + model;
     }
 }
